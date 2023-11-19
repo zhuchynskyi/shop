@@ -32,7 +32,7 @@ export default function Header(props) {
 
     return (
         <header>
-            <div>
+            <div className="head">
                 <span className='logo'>Gaming Staff</span>
                 <ul className='nav'>
                     <li>Про нас</li>
