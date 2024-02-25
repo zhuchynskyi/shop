@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import Order from '../order';
 
+
+
+
 const showOrders = (props) => {
     let summa = 0
     props.orders.forEach(el => summa += Number.parseFloat(el.price))
@@ -24,11 +27,8 @@ const showNothing = () => {
 }
 
 
-
-
 export default function Header(props) {
     let [cartOpen, setCartOpen] = useState(false)
-
 
     return (
         <header>
@@ -46,10 +46,15 @@ export default function Header(props) {
                     <div className='shop-cart'>
                         {props.orders.length > 0 ?
                             showOrders(props) : showNothing()}
+                            <div>
+                                <button>Заказать</button>
+                            </div>
                     </div>
+
                 )}
             </div>
             <div className='presentation'></div>
         </header>
+
     )
 }
